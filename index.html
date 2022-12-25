@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NurBank</title>
+    <link rel="stylesheet" href="libs/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="logo">
+            <img src="./img/logo.png" alt="">
+          </div>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <nav>
+            <ul>
+              <li>
+                <a href="#main">Главная</a>
+              </li>
+              <li>
+                <a href="#about-us">О нас</a>
+              </li>
+              <li>
+                <a href="#products">Продукты и услуги</a>
+              </li>
+              <li>
+                <a href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="main" class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 headline-block">
+          <h1>This website has made for NurBank</h1>
+        </div>
+        <div class="col-12 col-md-6">
+          <img src="./img/01.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-us">
+    <h2>О нас</h2>
+    <div class="container">
+      <p>Миссия банка — стать надежным партнером в предоставлении полного комплекса современных финансовых услуг субъектам розничного, малого и среднего бизнеса и крупным корпорациям для успешного достижения  поставленных ими целей.</p>
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <h3>Бизнес-принципы и Ценности</h3>
+          <p>Мы посвящаем свою деятельность, успешному развитию наших клиентов, основываясь на разделяемых нами бизнес-принципах и ценностях.
+            Все клиенты Банка — как частные лица, так и крупнейшие корпорации – всегда могут рассчитывать на получение высококачественных финансовых услуг через различные каналы продаж.
+            Мы постоянно улучшаем уровень сервиса путем совершенствования бизнес-процессов, внедрения передовых информационных технологий и повышения профессионализма. Наши усилия позволяют обслуживать клиентов оперативно и качественно
+            Мы делаем значительный вклад в развитие персонала Банка с тем, чтобы создать и поддерживать благоприятную и эффективную рабочую атмосферу. Мы заинтересованы в поиске наиболее талантливых и успешных людей.
+            Мы стремимся достичь высокого уровня рентабельности на долгосрочной основе и внести, существенный вклад в развитие и процветание нашей страны.
+            Наши отношения с клиентами, инвесторами, коллегами, и прочими организациями базируются на доверии и культуре открытого общения.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h3>Ценности Банка</h3>
+          <ul>
+            <li>Ориентированность на результат</li>
+            <li>Ответственность и доверие</li>
+            <li>Все для клиента</li>
+            <li>Профессионализм</li>
+            <li>Динамичность</li>
+            <li>Инициативность и креативность</li>
+            <li>Инновационность</li>
+            <li>Прозрачность</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2>Продукты и услуги</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-md-3 product-item">
+          <img src="img/about-icons/deposit.png" alt="">
+          <h3>Депозиты</h3>
+          <p>Надежное хранение и приумножение Ваших средств.</p>
+        </div>
+        <div class="col-6 col-md-3 product-item">
+          <img src="img/about-icons/credit.png" alt="">
+          <h3>Кредиты</h3>
+          <p>Займы на гибких условиях на любые цели и по выгодным процентам.</p>
+        </div>
+        <div class="col-6 col-md-3 product-item">
+          <img src="img/about-icons/transfers.png" alt="">
+          <h3>Денежные переводы</h3>
+          <p>Мгновенные переводы денежных средств между клиентами банка.</p>
+        </div>
+        <div class="col-6 col-md-3 product-item">
+          <img src="img/about-icons/cards.png" alt="">
+          <h3>Платежные карты</h3>
+          <p>Возможность снятия денежных средств в любом городе страны без комиссий.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="contacts">
+    <h2>Контакты</h2>
+    <b>+7 (705) 799-01-31</b>
+  </section>
+
+  <script>
+    let links = document.querySelectorAll('nav ul li a')
+    links.forEach(link => {
+      const target = document.querySelector(link.attributes[0].value)
+      link.addEventListener('click', (el) => {
+        el.preventDefault()
+        target.scrollIntoView({block: 'center', behavior: 'smooth'})
+      })
+    })
+  </script>
+</body>
+</html>
